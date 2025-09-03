@@ -114,7 +114,8 @@ def word_to_json(transcription,file_name):
 		"text": text_0,
 		"start": start_0,
 		"end": word.start,
-		"speaker_id": word.speaker_id
+		"speaker_id": word.speaker_id,
+		"type": word.type
 	})
 	save_json(json_data,file_name)
 
