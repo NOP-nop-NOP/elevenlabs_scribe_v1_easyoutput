@@ -10,6 +10,8 @@ textpattern/
 HISTORY.txt
 README.txt
 *.log
-/local_data/
-/input/
-/output/
+audio_input.txt
+api_key.txt
+*.json
+*.srt
+*.pkl
