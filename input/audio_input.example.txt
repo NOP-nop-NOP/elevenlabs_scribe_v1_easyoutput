@@ -1,0 +1,5 @@
+https://storage.googleapis.com/................................................1.mp3
+https://storage.googleapis.com/................................................2.wav
+https://storage.googleapis.com/................................................3.flac
+https://storage.googleapis.com/................................................4.aac
+https://storage.googleapis.com/................................................less than 3.0GB
