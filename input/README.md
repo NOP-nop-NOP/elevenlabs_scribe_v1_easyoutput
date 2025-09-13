@@ -1,7 +1,26 @@
-Place the file to be processed here.
+================================
+    文件输入说明 (Instructions)
+================================
 
-The script will run one of three methods:
+请将需要处理的文件放入当前文件夹。
 
-The script will prioritize processing .pkl files, 
-followed by reading audio_input.txt, 
-and finally reading local audio.
+脚本将根据以下优先级，自动选择一种模式运行：
+
+[ 1 ] 最高优先级：处理 .pkl 文件
+    - 如果文件夹内存在一个或多个 .pkl 文件，脚本将只处理这些 .pkl 文件。
+
+[ 2 ] 第二优先级：处理 audio_input.txt
+    - 如果文件夹内没有 .pkl 文件，脚本会查找名为 audio_input.txt 的文件。
+    - 脚本将读取该文件中列出的音频文件路径，并进行处理。
+    - 请确保 .txt 文件中的每个路径占一行。
+
+[ 3 ] 默认情况：处理本地音频文件
+    - 如果以上两种情况都不满足（即没有 .pkl 文件也没有 audio_input.txt），
+      脚本将自动查找并处理当前文件夹内所有支持的音频文件（如 .wav, .mp3, .m4a 等）。
+
+--------------------------------------------------
+简而言之：
+- 想处理 pkl？         -> 直接放入 .pkl 文件。（在处理完音频文件后，原始数据会保存为.pkl）
+- 想指定音频文件？ -> 创建 audio_input.txt 并填入路径。
+- 想处理文件夹里的音频？ -> 直接放入音频文件。
+--------------------------------------------------
