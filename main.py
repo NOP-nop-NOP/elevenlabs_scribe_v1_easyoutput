@@ -52,8 +52,8 @@ if __name__ == "__main__":
 			transcription = api_service(input_type, audio_file)
 		transcription = saveload_transcription(transcription, audio_file)
 		print(f"{audio_file} : {transcription.text}\n")
-		for word in transcription.words:
-			print(word)
+		# for word in transcription.words:
+		# 	print(word)
 		# print(transcription.additional_formats[0].content)
 		formatter('output', transcription, audio_file)
 
