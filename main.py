@@ -55,5 +55,5 @@ if __name__ == "__main__":
 		for word in transcription.words:
 			print(word)
 		# print(transcription.additional_formats[0].content)
-		# formatter('output', transcription, audio_file)
+		formatter('output', transcription, audio_file)
 
