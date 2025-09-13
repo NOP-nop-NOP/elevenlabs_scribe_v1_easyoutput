@@ -36,22 +36,24 @@ def saveload_transcription(transcription, file_name):
 		file_name = os.path.join('output', f"{file_name_without_ext}.pkl")
 		with open(file_name, 'wb') as f:
 				pickle.dump(transcription, f)
+		print(f"the transcription of {file_name} is saved\n")
 	else:
 		with open(file_name, 'rb') as f:
 			transcription = pickle.load(f)
+		print(f"the transcription of {file_name} is loaded\n")
 	return transcription
 
 if __name__ == "__main__":
 	input_type, audio_input = audio_input('input')
 	
 	for audio_file in audio_input:
-		print(f"{audio_file}\n")
+		print(f"{audio_file} is being processed\n")
 		transcription = ''
 		if input_type < 2:
-			print(f"{audio_file} : {input_type}\n")
+			print(f"the input type is : {input_type}\n")
 			transcription = api_service(input_type, audio_file)
 		transcription = saveload_transcription(transcription, audio_file)
-		print(f"{audio_file} : {transcription.text}\n")
+		print(f"the text of {audio_file} is : {transcription.text}\n")
 		# for word in transcription.words:
 		# 	print(word)
 		# print(transcription.additional_formats[0].content)
