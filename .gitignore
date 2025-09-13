@@ -7,6 +7,8 @@ sites/site*/public/admin/
 sites/site*/public/setup/
 sites/site*/public/theme/
 textpattern/
+test/
+__pycache__/
 HISTORY.txt
 README.txt
 *.log
@@ -14,5 +16,8 @@ audio_input.txt
 *.json
 *.srt
 *.pkl
-*.env
+.env
 *.aac
+*.wav
+*.mp3
+*.flac
