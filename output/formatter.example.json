@@ -1,0 +1,303 @@
+﻿[
+    {
+        "text": "(拍手)",
+        "start": 5.68,
+        "end": 8.029,
+        "speaker_id": "speaker_0",
+        "type": "audio_event"
+    },
+    {
+        "text": "月が沈む。私たちにかりそめの命を与えた、優しく無慈悲な、今宵の月が。",
+        "start": 8.039,
+        "end": 19.82,
+        "speaker_id": "speaker_1",
+        "type": "word"
+    },
+    {
+        "text": "終幕の時ね。土は土に、灰は灰に、人形は物言わぬ人形に、帰る時ですわ。私たちが滅ぼした世界と共に、塵と化す時。",
+        "start": 20.04,
+        "end": 38.5,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "所詮はかりそめの生命。呆気ないものですね。",
+        "start": 38.64,
+        "end": 43.6,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "いつだってそう。終わる時は一瞬。",
+        "start": 43.68,
+        "end": 48.24,
+        "speaker_id": "speaker_4",
+        "type": "word"
+    },
+    {
+        "text": "終わり。本当にそうなのかな？",
+        "start": 48.38,
+        "end": 53.48,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "ドロリス？何を言っているの？",
+        "start": 53.54,
+        "end": 57.0,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "実感が湧かないんだ。終わりの時が近づいてるなんて、どうしても思えなくて。",
+        "start": 57.74,
+        "end": 65.5,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "それはつまり、終わりたくない。かりそめとはいえ、命を失うのが嫌だと？",
+        "start": 65.6,
+        "end": 73.38,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "もちろん、そうだ。でも、それだけじゃないんだ。上手く言えないけど。",
+        "start": 73.42,
+        "end": 83.22,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "恐れているのね。かわいそうに。塵と化すその時まで、その手を握っていてあげますわ。",
+        "start": 83.32,
+        "end": 92.54,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "違うんだ！本当に、そうじゃなくて。僕たちは、世界を破壊した。理想のない、不実な世界を。そして、大切だった思い出も捨てた。全て忘れて、古い僕は死んだ。今の僕は、この世界と同じ、何もない。空っぽだ。なのに、いや、だからなのかな。清々しいんだ。憂いなんて何もない、この広い荒野を、どこまでも駆けていけそうなくらい。僕は今、こんなにも自由だ。",
+        "start": 92.72,
+        "end": 152.82,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "自由？かりそめの命？終幕の時？はあー、やだやだ、バッカみたい。これは、始まりの時。",
+        "start": 153.0,
+        "end": 169.81,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "アモーリス？",
+        "start": 169.86,
+        "end": 172.44,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "ええ、アモーリスの言う通りです。今まさに、新たな世界を創造する時。",
+        "start": 172.54,
+        "end": 180.609,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "ティモリスまで。",
+        "start": 180.64,
+        "end": 184.36,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "作り上げるんですよ、私たちが。",
+        "start": 184.54,
+        "end": 188.14,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "なんだって作ればいい。新たな世界も、夜空に浮かぶ月だって！",
+        "start": 188.28,
+        "end": 195.78,
+        "speaker_id": "speaker_4",
+        "type": "word"
+    },
+    {
+        "text": "この手で作った月の光なら。かりそめじゃない。それは私たちの、本当の命。そして僕たちは、本当の僕たちになれる。全てはこの時のため、でしたのね。",
+        "start": 195.88,
+        "end": 219.6,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "なんて愚かだったのかしら。たとえ月といえど、何者かに己の命を委ねるなんて。私たちの全ては、私たちだけのもの。生命も肉体も言葉も思慮も思い出も。",
+        "start": 219.7,
+        "end": 242.0,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "愛も。",
+        "start": 242.1,
+        "end": 243.56,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "恐れも。",
+        "start": 243.68,
+        "end": 245.109,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "悲しみも。",
+        "start": 245.2,
+        "end": 246.8,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "死も。",
+        "start": 246.82,
+        "end": 248.7,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "何者にも侵されない。明け渡さない。新しい月。新しい世界の完成だ。僕たちが創造した、新たな時代が始まる。ねえ、聞こえる？",
+        "start": 248.86,
+        "end": 280.8,
+        "speaker_id": "speaker_1",
+        "type": "word"
+    },
+    {
+        "text": "ええ、聞こえるわ。新しい世界の産声。",
+        "start": 280.9,
+        "end": 286.54,
+        "speaker_id": "speaker_4",
+        "type": "word"
+    },
+    {
+        "text": "歓喜の声。おめでとう。",
+        "start": 286.68,
+        "end": 290.4,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "おめでとう。",
+        "start": 290.42,
+        "end": 291.82,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "おめでとう。やっと会えたね。",
+        "start": 291.86,
+        "end": 295.4,
+        "speaker_id": "speaker_1",
+        "type": "word"
+    },
+    {
+        "text": "皆、あなたを待っていました。",
+        "start": 295.7,
+        "end": 298.88,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "古い自分と決別した。",
+        "start": 299.04,
+        "end": 301.72,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "新しい世界。",
+        "start": 301.96,
+        "end": 303.68,
+        "speaker_id": "speaker_1",
+        "type": "word"
+    },
+    {
+        "text": "新しいあなた。",
+        "start": 303.78,
+        "end": 305.86,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "僕たちが生み落とした。",
+        "start": 306.08,
+        "end": 308.54,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "創造した。",
+        "start": 308.8,
+        "end": 310.43,
+        "speaker_id": "speaker_4",
+        "type": "word"
+    },
+    {
+        "text": "理想の世界。",
+        "start": 310.5,
+        "end": 312.34,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "今、始まる。ゼロから一へ。",
+        "start": 312.6,
+        "end": 327.62,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "( babyの泣き声 )",
+        "start": 327.62,
+        "end": 329.0,
+        "speaker_id": "speaker_0",
+        "type": "audio_event"
+    },
+    {
+        "text": "ああ、あなたもこの時を待っていたのね。喜ばしくて泣いているのね。",
+        "start": 329.02,
+        "end": 335.9,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    },
+    {
+        "text": "この産声は、世界の産声。",
+        "start": 335.92,
+        "end": 340.34,
+        "speaker_id": "speaker_3",
+        "type": "word"
+    },
+    {
+        "text": "そして、私の。",
+        "start": 340.36,
+        "end": 343.14,
+        "speaker_id": "speaker_0",
+        "type": "word"
+    },
+    {
+        "text": "そして、あんたの。",
+        "start": 343.22,
+        "end": 347.44,
+        "speaker_id": "speaker_4",
+        "type": "word"
+    },
+    {
+        "text": "特別に、あなたには全て見せてあげるわ。始まりの時、そして、新たな世界の全てを。だって、その目で見てしまったのでしょう？世界を壊し、作り上げた、その瞬間、その全てを。つまり、あなたは目撃者。そして、私たちの共犯者。今宵、新たな世界の始まり。私たちは、本当の私たちに生まれ変わる。",
+        "start": 347.54,
+        "end": 406.0,
+        "speaker_id": "speaker_2",
+        "type": "word"
+    }
+]
