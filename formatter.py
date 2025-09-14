@@ -159,12 +159,6 @@ if __name__ == "__main__":
 	print(transcription.additional_formats[0].content)
 	formatter('output', transcription, audio_file)
 
-	# transcription_results_to_segmented_json(transcription, f"transcription_results_{file_name}_segmented.json")
-
-	# print(transcription)
-	# print(transcription.additional_formats[0].content)
-	# for word in transcription.words:
-	# 	print(word)
 
 
 
