@@ -13,9 +13,6 @@ HISTORY.txt
 README.txt
 *.log
 audio_input.txt
-*.json
-*.srt
-*.pkl
 .env
 *.aac
 *.wav
