@@ -127,7 +127,7 @@ def word_to_srt(transcription, file_path):
 			speaker_buffer = word.speaker_id
 		if word.type != 'word':
 			if text_buffer:
-				srt_data.append(f"{srt_index}\n{format_srt_time(start_time)} --> {format_srt_time(end_time)}\n<{speaker_buffer}>{text_buffer}\n")
+				srt_data.append(f"{srt_index}\n{format_srt_time(start_time)} --> {format_srt_time(end_time)}\n{speaker_buffer}: {text_buffer}\n")
 				srt_index += 1
 			if word.type == 'audio_event':
 				srt_data.append(f"{srt_index}\n{format_srt_time(word.start)} --> {format_srt_time(end_time)}\n{word.text}\n")
@@ -137,14 +137,14 @@ def word_to_srt(transcription, file_path):
 		else:
 			if word.speaker_id != speaker_buffer:
 				if text_buffer:
-					srt_data.append(f"{srt_index}\n{format_srt_time(start_time)} --> {format_srt_time(end_time)}\n<{speaker_buffer}>{text_buffer}\n")
+					srt_data.append(f"{srt_index}\n{format_srt_time(start_time)} --> {format_srt_time(end_time)}\n{speaker_buffer}: {text_buffer}\n")
 					srt_index += 1
 				text_buffer = ''
 				start_time = word.start
 				speaker_buffer = word.speaker_id
 			text_buffer += word.text		
 	if text_buffer:
-		srt_data.append(f"{srt_index}\n{format_srt_time(start_time)} --> {format_srt_time(end_time)}\n<{speaker_buffer}>{text_buffer}\n")
+		srt_data.append(f"{srt_index}\n{format_srt_time(start_time)} --> {format_srt_time(end_time)}\n{speaker_buffer}: {text_buffer}\n")
 	save_srt(srt_data, file_path)
 	
 def save_srt(srt_data, file_name):
