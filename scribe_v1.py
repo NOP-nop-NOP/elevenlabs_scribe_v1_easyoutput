@@ -33,6 +33,8 @@ def api_service(input_type, audio_file):
 		transcription = get_transcription_file(audio_file, elevenlabs)
 	else:
 		transcription = get_transcription_url(audio_file, elevenlabs)
+	if transcription:
+		print(f"Transcription get success")
 	return transcription
 
 def get_transcription_file(audio_input_path, elevenlabs):
