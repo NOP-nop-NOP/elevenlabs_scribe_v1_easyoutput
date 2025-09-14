@@ -16,51 +16,15 @@ STT的返回数据总会保存为 `.pkl` 文件。
 2.  **忽略**：在扫描过程中，`.pkl` 文件会被完全忽略，不作为格式参考。
 3.  **匹配**：脚本会以所有非 `.pkl` 文件类型作为本次任务的输出格式。
 
-### 示例场景 (未来理想状态)
+### 示例场景
 * 如果 `output` 文件夹内有 `result.txt` -> 新结果将保存为 `.txt` 文件。
 * 如果 `output` 文件夹内有 `result.srt` -> 新结果将保存为 `.srt` 文件。
-* 如果 `output` 文件夹内有 `result.json` -> 新结果将保存为 `.json` 文件。 <- 目前唯一支持的格式
+* 如果 `output` 文件夹内有 `result.json` -> 新结果将保存为 `.json` 文件。
+* 如果 `output` 文件夹内有 `result.csv` -> 新结果将保存为 `.csv` 文件。 <-- 尚未支持
 
 ---
-
-## ❗ 重要提示：当前版本限制
-
-**在当前版本中，唯一支持的输出格式是 `.json`。**
 
 **最终结果：**
 处理完一个输入文件（如 `meeting_audio.wav`）后，你会在 `output` 文件夹中找到一个对应的 `.json` 结果文件（即 `meeting_audio.json`）。
 
-```json
-// output/meeting_audio.json 文件内容示例
-[
-    {
-        "text": "(拍手)",
-        "start": 7.84,
-        "end": 8.209,
-        "speaker_id": "speaker_0",
-        "type": "audio_event"
-    },
-    {
-        "text": "光って何だろう。美しいもの、温かいもの。",
-        "start": 8.209,
-        "end": 17.78,
-        "speaker_id": "speaker_1",
-        "type": "word"
-    },
-    {
-        "text": "私たちを照らしてくれる、認めてくれる。",
-        "start": 18.14,
-        "end": 23.76,
-        "speaker_id": "speaker_2",
-        "type": "word"
-    },
-    ...,
-    {
-        "text": "圧倒的なもの。",
-        "start": 23.98,
-        "end": 27.56,
-        "speaker_id": "speaker_3",
-        "type": "word"
-    }
-]
-```
+具体输出案例详见 `formatter.example` 
