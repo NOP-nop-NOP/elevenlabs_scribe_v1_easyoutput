@@ -52,6 +52,11 @@ if __name__ == "__main__":
 		if input_type < 2:
 			print(f"the input type is : {input_type}\n")
 			transcription = api_service(input_type, audio_file)
+		# 检查audio_file是否是URL Encoding
+		import urllib.parse
+		decoded_audio_file = urllib.parse.unquote(audio_file)
+		if decoded_audio_file != audio_file:
+			audio_file = decoded_audio_file
 		transcription = saveload_transcription(transcription, audio_file)
 		print(f"the text of {audio_file} is : {transcription.text}\n")
 		# for word in transcription.words:
