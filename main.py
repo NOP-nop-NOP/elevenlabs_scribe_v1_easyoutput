@@ -62,12 +62,14 @@ if __name__ == "__main__":
 				except Exception as e:
 					retry_count += 1
 					print(f"Error occurred: {e}. Retrying {retry_count}/{max_retries}...")
+					transcription = ''
+					model_id = ''
 					time.sleep(1)
 					if retry_count == max_retries:
 						print("Max retries reached. Skipping this file.")
-						transcription, model_id = None, None
 						break
-			transcription, model_id = api_service(input_type, audio_file)
+			if transcription == '':
+				continue
 		# 检查audio_file是否是URL Encoding
 		import urllib.parse
 		decoded_audio_file = urllib.parse.unquote(audio_file)
