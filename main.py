@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import os, json, re
+import os, json, re, time
 from scribe_v1 import api_service
 from formatter import formatter
 
@@ -28,12 +28,12 @@ def audio_input(audio_input_path):
 	
 	return input_type, audio_input
 
-def saveload_transcription(transcription, file_name):
+def saveload_transcription(transcription, file_name, model_id):
 	import pickle
 	if transcription:
 		file_name_without_path = os.path.basename(file_name)
 		file_name_without_ext = os.path.splitext(file_name_without_path)[0]
-		file_name = os.path.join('output', f"{file_name_without_ext}.pkl")
+		file_name = os.path.join('output', f"{file_name_without_ext}_{model_id}.pkl")
 		with open(file_name, 'wb') as f:
 				pickle.dump(transcription, f)
 		print(f"the transcription of {file_name} is saved\n")
@@ -49,15 +49,31 @@ if __name__ == "__main__":
 	for audio_file in audio_input:
 		print(f"{audio_file} is being processed\n")
 		transcription = ''
+		model_id = ''
 		if input_type < 2:
 			print(f"the input type is : {input_type}\n")
-			transcription = api_service(input_type, audio_file)
+			# 断线重连 (Reconnect on failure)
+			max_retries = 10
+			retry_count = 0
+			while retry_count < max_retries:
+				try:
+					transcription, model_id = api_service(input_type, audio_file)
+					break
+				except Exception as e:
+					retry_count += 1
+					print(f"Error occurred: {e}. Retrying {retry_count}/{max_retries}...")
+					time.sleep(1)
+					if retry_count == max_retries:
+						print("Max retries reached. Skipping this file.")
+						transcription, model_id = None, None
+						break
+			transcription, model_id = api_service(input_type, audio_file)
 		# 检查audio_file是否是URL Encoding
 		import urllib.parse
 		decoded_audio_file = urllib.parse.unquote(audio_file)
 		if decoded_audio_file != audio_file:
 			audio_file = decoded_audio_file
-		transcription = saveload_transcription(transcription, audio_file)
+		transcription = saveload_transcription(transcription, audio_file, model_id)
 		print(f"the text of {audio_file} is : {transcription.text}\n")
 		# for word in transcription.words:
 		# 	print(word)
