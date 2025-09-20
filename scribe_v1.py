@@ -25,23 +25,24 @@ def elevenlabs_api():
 	from dotenv import load_dotenv
 	load_dotenv()
 	elevenlabs = ElevenLabs(api_key=os.getenv("ELEVENLABS_API_KEY"),)
-	return elevenlabs
+	model_id = os.getenv("ELEVENLABS_MODEL_ID")
+	return elevenlabs, model_id
 
 def api_service(input_type, audio_file):
-	elevenlabs = elevenlabs_api()
+	elevenlabs, model_id = elevenlabs_api()
 	if input_type == 0:
-		transcription = get_transcription_file(audio_file, elevenlabs)
+		transcription, model_id = get_transcription_file(audio_file, elevenlabs, model_id)
 	else:
-		transcription = get_transcription_url(audio_file, elevenlabs)
+		transcription, model_id = get_transcription_url(audio_file, elevenlabs, model_id)
 	if transcription:
 		print(f"Transcription get success")
-	return transcription
+	return transcription, model_id
 
-def get_transcription_file(audio_input_path, elevenlabs):
+def get_transcription_file(audio_input_path, elevenlabs, model_id):
 	with open(audio_input_path, 'rb') as f:
 		audio_input = f.read()
 	transcription = elevenlabs.speech_to_text.convert(
-		model_id="scribe_v1", # Model to use, for now only "scribe_v1" is supported
+		model_id=model_id, # Model to use, for now only "scribe_v1" is supported
 		file=audio_input, # or cloud_storage_url
 		language_code="jpn", # Language of the audio file. If set to None, the model will detect the language automatically.
 		tag_audio_events=True, # Tag audio events like laughter, applause, etc.
@@ -52,11 +53,11 @@ def get_transcription_file(audio_input_path, elevenlabs):
 		additional_formats=[SegmentedJsonExportOptions],
 		# use_multi_channel=True,
 	)
-	return transcription
+	return transcription, model_id
 
-def get_transcription_url(audio_url, elevenlabs):
+def get_transcription_url(audio_url, elevenlabs, model_id):
 	transcription = elevenlabs.speech_to_text.convert(
-		model_id="scribe_v1", # Model to use, for now only "scribe_v1" is supported
+		model_id=model_id, # Model to use, for now only "scribe_v1" is supported
 		cloud_storage_url=audio_url,
 		language_code="jpn", # Language of the audio file. If set to None, the model will detect the language automatically.
 		tag_audio_events=True, # Tag audio events like laughter, applause, etc.
@@ -67,7 +68,7 @@ def get_transcription_url(audio_url, elevenlabs):
 		additional_formats=[SegmentedJsonExportOptions],
 		# use_multi_channel=True,
 	)
-	return transcription
+	return transcription, model_id
 
 def transcription_results_to_segmented_json(transcription, file_name):
 	json_data = json.loads(transcription.additional_formats[0].content)
@@ -82,11 +83,11 @@ if __name__ == "__main__":
 	from main import saveload_transcription
 	input_type, audio_input = audio_input('input')
 	transcription = ''
-	elevenlabs = elevenlabs_api()
+	elevenlabs, model_id = elevenlabs_api()
 	for audio_file in audio_input:
 		if input_type < 2:
-			transcription = api_service(input_type, audio_file, elevenlabs)
-		transcription = saveload_transcription(transcription, audio_file)
+			transcription, model_id = api_service(input_type, audio_file, elevenlabs, model_id)
+		transcription = saveload_transcription(transcription, audio_file, model_id)
 		print(transcription)
 
 '''
